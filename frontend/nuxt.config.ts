@@ -38,7 +38,8 @@ export default defineNuxtConfig({
         },
         directus: {
             url: process.env.DIRECTUS_URL || 'http://localhost:8055',
-            token: process.env.DIRECTUS_TOKEN || '',
+            readToken: process.env.DIRECTUS_READ_TOKEN || '',
+            crudToken: process.env.DIRECTUS_CRUD_TOKEN || '',
         },
     },
 
