@@ -25,8 +25,9 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: {
-            apiBase: process.env.DIRECTUS_URL || 'http://localhost:8055',
-            urlBase: process.env.BASE_URL || 'http://localhost:3000',
+            cmsUrl: process.env.DIRECTUS_URL || 'http://localhost:3000',
+            siteUrl: process.env.SITE_URL || 'http://localhost:8055',
+            appEnv: (process.env.APP_ENV || 'prod') as 'dev' | 'prod',
         },
         smtp: {
             host: process.env.SMTP_HOST || '',
